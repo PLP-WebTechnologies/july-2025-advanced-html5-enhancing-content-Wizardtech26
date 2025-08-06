@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form Demo Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background: #f4f4f4;
+        }
+        header, nav, main, footer {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        header {
+            background: #004080;
+            color: white;
+            text-align: center;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            background: #333;
+            padding: 10px;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background: #004080;
+            color: white;
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background: #004080;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0066cc;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Enhanced Demo Page</h1>
+    <p>Showcasing Lists, Tables, Media, and an Accessible HTML5 Form</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#form">Form</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Lists Section -->
+    <section id="lists">
+        <h2>Programming Languages</h2>
+        <p>Popular programming languages categorized:</p>
+        <h3>Front-End</h3>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ul>
+        <h3>Back-End</h3>
+        <ol>
+            <li>Python</li>
+            <li>Node.js</li>
+            <li>PHP</li>
+        </ol>
+    </section>
+
+    <!-- Tables Section -->
+    <section id="tables">
+        <h2>Language Comparison</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Popularity</th>
+                    <th>Difficulty</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Python</td>
+                    <td>High</td>
+                    <td>Easy</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>High</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Medium</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td>C++</td>
+                    <td>Medium</td>
+                    <td>Hard</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media">
+        <h2>Media Content</h2>
+        <p>Sample image and video demonstration:</p>
+        <img src="https://via.placeholder.com/600x300" alt="Sample Image" width="100%">
+        <p>Watch this video:</p>
+        <video controls width="50%">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form">
+        <h2>Registration Form</h2>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="3">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254700000000" pattern="^\+?[0-9]{10,15}$" required>
+
+                <label for="id">National ID (Read Only):</label>
+                <input type="text" id="id" name="id" value="AUTO12345" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="4">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter a secure password" required minlength="6">
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required minlength="6">
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">-- Select your country --</option>
+                    <option value="ke">Kenya</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+
+                <label>Subscribe to Newsletter:</label>
+                <input type="checkbox" id="newsletter" name="newsletter"> Yes, subscribe me
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Info</legend>
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+            </fieldset>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced Demo Page. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
